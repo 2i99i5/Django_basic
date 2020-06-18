@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ page_title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/animation.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'css/fontello.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'css/fontello-codes.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'css/fontello-embedded.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'css/fontello-ie7.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'css/fontello-ie7-codes.css' %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="container">
+    {% block container %}
+    {% endblock %}
+</div>
+    {% block footer %}
+        <div class="footer padding-site">
+            <div class="footer-contact">
+                <h2 class="footer-h2">Contact&nbsp;Us</h2>
+                <p class="footer-p">132A Bridge Road Richmond VIC Australia.</p>
+                <p class="footer-p">Talk to us on 1300 132 info@interior.com</p>
+            </div>
+            <div class="footer-info">
+                <h2 class="footer-h2">Useful&nbsp;Information</h2>
+                <ul class="f-info">
+                    <li class="f-info-list"><a href="#" class="f-info-link">Sales&nbsp;terms</a></li>
+                    <li class="f-info-list"><a href="#" class="f-info-link">Customer&nbsp;care</a></li>
+                    <li class="f-info-list"><a href="#" class="f-info-link">Delivery</a></li>
+                    <li class="f-info-list"><a href="#" class="f-info-link">Architect&nbsp;accounts</a></li>
+                    <li class="f-info-list"><a href="#" class="f-info-link">Careers</a></li>
+                    <li class="f-info-list"><a href="#" class="f-info-link">Exchanges&nbsp;&amp;&nbsp;returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe clearfix">
+                <h2 class="footer-h2">Let’s&nbsp;Stay&nbsp;in&nbsp;Touch!</h2>
+                <p class="footer-p">Suscribe to know about our latest news, products and
+                <div class="footer-input">
+                    <form action="#">
+                        <input placeholder="your email address" type="text" class="footer-email"><a href="#"
+                                                                                                    class="button-email"><i
+                            class="icon-paper-plane"></i></a></form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR {% now "Y" %}. All Rights Reserved.</p>
+                <div class="footer-social-box"><a href="#" class="footer-social-box-link"><i
+                        class="footer-social-icon icon-facebook-circled"></i></a> <a href="#" class="footer-social-box-link"><i
+                        class="footer-social-icon icon-twitter-circled"></i></a> <a href="#" class="footer-social-box-link"><i
+                        class="footer-social-icon icon-gplus-circled"></i></a> <a href="#" class="footer-social-box-link"><i
+                        class="footer-social-icon icon-pinterest-circled"></i></a></div>
+                <div class="footer-terms-privacy"><a href="#" class="footer-terms-privacy-link">Terms &amp;&nbsp;Conditions
+                    /</a><a href="#" class="footer-terms-privacy-link"> Privacy policy &amp;&nbsp;Cookies</a></div>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+
+</html>
